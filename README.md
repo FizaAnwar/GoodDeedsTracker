@@ -42,9 +42,3 @@ GoodDeedsTracker/
 ├── script.js    # app logic
 └── README.md
 ```
-
-## Coming next
-
-- Node.js and Express backend
-- Database to store deeds
-- Streaks, categories and a monthly chart
