@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Little Good Things – Good deeds dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand">
+    <svg viewBox="0 0 40 40" fill="currentColor"><circle cx="20" cy="9" r="7"/><circle cx="31" cy="17" r="7"/><circle cx="27" cy="30" r="7"/><circle cx="13" cy="30" r="7"/><circle cx="9" cy="17" r="7"/><circle cx="20" cy="20" r="5" fill="var(--side)"/></svg>
+    <div><b>little good things</b><small>Your kindness journal</small></div>
+  </div>
+  <nav aria-label="Main menu">
+    <button class="on" data-v="dash">▦ Dashboard</button>
+    <button data-v="daily">♡ Daily deeds</button>
+    <button data-v="hist">◷ History</button>
+  </nav>
+</aside>
+<main>
+  <div class="top">
+    <div><p>Your personal space</p><h1 id="title">Good deeds dashboard<i>.</i></h1></div>
+    <div class="date"><b id="d1"></b><span id="d2"></span></div>
+  </div>
+
+  <section class="view on" id="dash">
+    <div class="hero">
+      <div><small>✦ A new day, a new chance</small><h2>Make today a little more beautiful.</h2><p>Every good thing you do matters. Don’t forget to count the little ones.</p></div>
+      <svg viewBox="0 0 40 40" fill="#fff"><circle cx="20" cy="9" r="8"/><circle cx="31" cy="17" r="8"/><circle cx="27" cy="30" r="8"/><circle cx="13" cy="30" r="8"/><circle cx="9" cy="17" r="8"/></svg>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="h"><span>♡</span><span>Daily</span></div><div class="num" id="sD">0</div><b>Today’s good deeds</b><span>Your kindness today</span></div>
+      <div class="stat"><div class="h"><span>✿</span><span>Monthly</span></div><div class="num" id="sM">0</div><b>This month’s good deeds</b><span id="lM"></span></div>
+      <div class="stat"><div class="h"><span>☀</span><span>Yearly</span></div><div class="num" id="sY">0</div><b>This year’s good deeds</b><span id="lY"></span></div>
+      <div class="stat"><div class="h"><span>♡</span><span>All time</span></div><div class="num" id="sA">0</div><b>Total good deeds</b><span>Every act counts</span></div>
+    </div>
+    <div class="grid">
+      <div class="panel">
+        <span class="eyebrow">Your daily moments</span>
+        <h2>What good did you do?</h2>
+        <div class="add"><input id="in1" placeholder="Write a little good thing…" maxlength="140" aria-label="New good deed"><button class="btn" id="b1" style="padding:15px 22px">+ Add deed</button></div>
+        <div class="lh"><h3>Today’s little wins</h3><span id="cnt"></span></div>
+        <ul id="ul1"></ul>
+      </div>
+      <div class="panel goal">
+        <span class="eyebrow">Your daily goal</span>
+        <h2>Little steps, big impact.</h2>
+        <div class="big"><span id="gN">0</span> <small>/ 5 deeds</small></div>
+        <div class="bar"><i id="gB" style="width:0"></i></div>
+        <p id="gT"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" id="daily">
+    <div class="panel">
+      <span class="eyebrow">Today</span>
+      <h2>Your daily deeds</h2>
+      <div class="add"><input id="in2" placeholder="Write a little good thing…" maxlength="140" aria-label="New good deed"><button class="btn" id="b2" style="padding:15px 22px">+ Add deed</button></div>
+      <ul id="ul2"></ul>
+    </div>
+  </section>
+
+  <section class="view" id="hist">
+    <div class="panel">
+      <span class="eyebrow">Everything you’ve done</span>
+      <h2>History</h2>
+      <div id="hl"></div>
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
